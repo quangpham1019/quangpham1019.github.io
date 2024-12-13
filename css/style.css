@@ -151,35 +151,44 @@ header {
     .portfolio-intro {
         background-color: violet;
     }
-    .portfolio-content {
-        background-color: green;
-        width: 100%;
-        flex: 1;
+
+    .project-list-wrapper {
+        background-color: olivedrab;
 
         display: flex;
-        justify-content: center;
-        align-items: center;
+        width: 100vw;
+        flex: 1;
+        overflow: hidden;
 
-        .project-list-wrapper {
-            background-color: red;
+        ul {
+            padding-left: 0;
+            /*flex: 1;*/
+            /*width: 100%;*/
 
-            ul {
-                padding-left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1%;
+
+            li {
+                width: 25%;
+                height: 40%;
 
                 display: flex;
                 align-items: center;
-                justify-content: space-around;
-                flex-wrap: wrap;
+                justify-content: center;
+                flex-direction: column-reverse;
 
-                li {
-                    margin: 0 20px;
-                    width: 30%;
-                    height: 50px;
+                list-style: none;
+                text-align: center;
+                font-size: 17px;
 
-                    list-style: none;
-                    text-align: center;
-                    font-size: 17px;
+                img {
+                    overflow: auto;
                 }
+
+                h4 { }
             }
         }
     }
