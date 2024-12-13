@@ -1,8 +1,126 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    /**************
+        COLOR
+    ***************/
+    --text-color: #FFDC7F;
+    --primary-color: #030637;
+    --secondary-color: #3C0753;
 
+    color: var(--text-color);
+
+    /**************
+        DIMENSION
+    ***************/
+    --header-height: 10vh;
+    --section-height: 100vh;
+}
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-color);
+    height: auto;
+}
+
+/**************
+    HEADER
+***************/
+header {
+    position: sticky;
+    top: 0;
+}
+.header {
+
+    /*border: 10px solid blue;*/
+    --percent-logo-wrapper: 15%;
+
+    background-color: var(--secondary-color);
+    height: var(--header-height);
+
+    display: flex;
+    justify-content: space-between;
+
+    /**************
+        LOGO
+    ***************/
+    .logo-wrapper {
+        /*background-color: lightblue;*/
+        width: var(--percent-logo-wrapper);
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+
+        .logo {
+            color: var(--text-color);
+            font-family: "Arial Black";
+            font-size: xxx-large;
+        }
+    }
+
+    /**************
+        NAVBAR
+    ***************/
+    .navbar-wrapper {
+        /*background-color: red;*/
+        height: 100%;
+        width: calc(100% - var(--percent-logo-wrapper));
+        display: flex;
+        justify-content: end;
+
+        .navbar {
+            /*background-color: purple;*/
+            margin: 0;
+            padding-right: 50px;
+
+            width: max-content;
+            display: flex;
+            align-items: center;
+
+            ul {
+                padding-left: 0;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+                li {
+                    margin: 0 20px;
+
+                    list-style: none;
+                    text-align: center;
+                    font-size: 17px;
+
+                    a {
+                        text-decoration: none;
+                        color: var(--text-color);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hero {
+    height: calc(100vh - var(--header-height));
+}
+
+.about {
+    height: var(--section-height);
+}
+
+.portfolio {
+    height: var(--section-height);
+
+}
+
+.contact {
+    height: var(--section-height);
+
+}
+
+.footer {
+
 }
