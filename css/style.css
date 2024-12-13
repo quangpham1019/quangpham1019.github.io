@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 * {
+    box-sizing: border-box;
+
     /**************
         COLOR
     ***************/
@@ -14,14 +16,13 @@
     ***************/
     --header-height: 10vh;
     --section-height: 100vh;
+    --padding-top-to-account-header: var(--header-height);
 }
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     background-color: var(--primary-color);
-    height: auto;
 }
 
 /**************
@@ -105,19 +106,89 @@ header {
 
 .hero {
     height: calc(100vh - var(--header-height));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+
+    .hero-message {
+        background-color: purple;
+        height: 80%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        h1 {
+            font-size: xxx-large;
+            font-weight: bolder;
+        }
+    }
+
+    .hero-image {
+        height: 80%;
+        width: 30%;
+        background-color: green;
+    }
 }
 
 .about {
     height: var(--section-height);
+    padding-top: var(--header-height);
+
 }
 
 .portfolio {
     height: var(--section-height);
+    padding-top: var(--header-height);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+
+    .portfolio-intro {
+        background-color: violet;
+    }
+    .portfolio-content {
+        background-color: green;
+        width: 100%;
+        flex: 1;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .project-list-wrapper {
+            background-color: red;
+
+            ul {
+                padding-left: 0;
+
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                flex-wrap: wrap;
+
+                li {
+                    margin: 0 20px;
+                    width: 30%;
+                    height: 50px;
+
+                    list-style: none;
+                    text-align: center;
+                    font-size: 17px;
+                }
+            }
+        }
+    }
 
 }
 
 .contact {
     height: var(--section-height);
+    padding-top: var(--header-height);
 
 }
 
