@@ -5,11 +5,9 @@
     /**************
         COLOR
     ***************/
-    --text-color: #FFDC7F;
-    --primary-color: #030637;
-    --secondary-color: #3C0753;
-
-    color: var(--text-color);
+    --text-color: black;
+    --primary-color: white;
+    --secondary-color: black;
 
     /**************
         DIMENSION
@@ -22,7 +20,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: var(--primary-color);
+    background-color: lightgrey;
 }
 
 /**************
@@ -38,7 +36,10 @@ header {
     --percent-logo-wrapper: 15%;
 
     background-color: var(--secondary-color);
+    color: white;
+
     height: var(--header-height);
+
 
     display: flex;
     justify-content: space-between;
@@ -55,9 +56,10 @@ header {
         justify-content: center;
 
         .logo {
-            color: var(--text-color);
             font-family: "Arial Black";
             font-size: xxx-large;
+            color: white;
+
         }
     }
 
@@ -67,9 +69,9 @@ header {
     .navbar-wrapper {
         /*background-color: red;*/
         height: 100%;
-        width: calc(100% - var(--percent-logo-wrapper));
+        flex-grow: 1;
         display: flex;
-        justify-content: end;
+        justify-content: center;
 
         .navbar {
             /*background-color: purple;*/
@@ -93,29 +95,75 @@ header {
                     list-style: none;
                     text-align: center;
                     font-size: 17px;
+                    font-weight: bolder;
 
                     a {
                         text-decoration: none;
-                        color: var(--text-color);
+                        color: white;
+
                     }
                 }
             }
         }
     }
+
+    /**************
+        NAVBAR
+    ***************/
+
+    .social-icons-wrapper {
+        /*background-color: red;*/
+        padding-right: 2%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 20px;
+
+        a {
+            /*background-color: #04AA6D;*/
+            height: 60%;
+
+            border: none;
+            color: white;
+            cursor: pointer;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            /*display: inline-block;*/
+
+            .social-icon {
+                color: white!important;
+                height: 90%!important;
+                width: 90%!important;
+            }
+        }
+    }
 }
 
+/**************
+    HERO
+***************/
 .hero {
     height: calc(100vh - var(--header-height));
+    background: url("https://freerangestock.com/sample/135356/close-up-of-a-open-blank-laptop-on-the-table.jpg");
+    background-size: contain;
+    background-position: right;
+    background-repeat: no-repeat;
 
+    background-color: #F4F3F1;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     gap: 5%;
 
     .hero-message {
-        background-color: purple;
+        background-color: rgba(205, 201, 200, 0.5);
+        margin-left: 5%;
         height: 80%;
-        width: 50%;
+        width: 40%;
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -126,20 +174,53 @@ header {
         }
     }
 
-    .hero-image {
-        height: 80%;
-        width: 30%;
-        background-color: green;
+    /*.hero-image {*/
+    /*    height: 80%;*/
+    /*    width: 30%;*/
+    /*    background-color: green;*/
+    /*}*/
+
+    .hero-right {
+
+        height: 100%;
+        width: 50%;
+
+        display: flex;
+        align-items: start;
+        justify-content: center;
+
+        .tech-icon-container {
+            /*background-color: darkgrey;*/
+            height: 35%;
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            column-gap: 10px;
+            .tech-icon-wrapper {
+                /*background-color: greenyellow;*/
+                height: 25%;
+            }
+        }
+
     }
 }
 
+/**************
+    ABOUT
+***************/
 .about {
     height: var(--section-height);
     padding-top: var(--header-height);
 
 }
 
-.portfolio {
+/**************
+    PORTFOLIO
+***************/
+.project {
     height: var(--section-height);
     padding-top: var(--header-height);
 
@@ -148,17 +229,23 @@ header {
     justify-content: start;
     align-items: start;
 
-    .portfolio-intro {
-        background-color: violet;
+    /**************
+        PORTFOLIO INTRO
+    ***************/
+    .project-intro {
+        background-color: rgba(255, 255, 255, 0.8);
     }
 
+    /**************
+        PORTFOLIO PROJECTS
+    ***************/
     .project-list-wrapper {
         background-color: olivedrab;
 
         display: flex;
         width: 100vw;
         flex: 1;
-        overflow: hidden;
+        overflow: hidden; /* prevents overflowing in case child elements grow too big */
 
         ul {
             padding-left: 0;
@@ -169,7 +256,7 @@ header {
             align-items: center;
             justify-content: space-around;
             flex-wrap: wrap;
-            gap: 1%;
+            gap: 1%; /* somehow this works, allow a good gap between flex children */
 
             li {
                 width: 25%;
@@ -185,7 +272,7 @@ header {
                 font-size: 17px;
 
                 img {
-                    overflow: auto;
+                    overflow: auto; /* scale image to fit parent */
                 }
 
                 h4 { }
