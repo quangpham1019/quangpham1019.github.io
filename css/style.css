@@ -243,7 +243,7 @@ header {
         background-color: olivedrab;
 
         display: flex;
-        width: 100vw;
+        width: 100%;
         flex: 1;
         overflow: hidden; /* prevents overflowing in case child elements grow too big */
 
@@ -279,7 +279,6 @@ header {
             }
         }
     }
-
 }
 
 .contact {
