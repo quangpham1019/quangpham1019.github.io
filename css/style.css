@@ -148,7 +148,7 @@ header {
 ***************/
 .hero {
     height: calc(100vh - var(--header-height));
-    background: url("https://freerangestock.com/sample/135356/close-up-of-a-open-blank-laptop-on-the-table.jpg");
+    background: url("assets/images/hero-background.jpg");
     background-size: contain;
     background-position: right;
     background-repeat: no-repeat;
